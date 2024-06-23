@@ -303,7 +303,22 @@ console.log(
 // }
 // let findMaximum5 = findMax5(data);
 // // console.log(findMaximum5);
-function findmax5(arr) {}
+function findmax5(arr) {
+  let dataArr = [];
+  for (let w = 0; w < arr.length; w++) {
+    dataArr.push(arr[w].totalPrice);
+  }
+  console.log("борлуулалтын нийт үнийн дүнгүүд : ", dataArr);
+  dataArr.sort(function (a, b) {
+    return a - b;
+  });
+  console.log(
+    "Хамгийн их борлуулалтын нийт үнийн дүнгүүд : ",
+    dataArr.slice(5, 11)
+  );
+}
+
+let findMax5 = findmax5(data);
 
 // 4. Хамгийн бага зарагдсан 5 барааны жагсаалт /боруулалтын тоо хэмжээгэр/ харуулах.
 // function findmin5(arr) {
@@ -368,3 +383,18 @@ function findmax5(arr) {}
 // }
 // let findMinimum5 = findMin5(data);
 // // console.log(findMinimum5);
+function findmin5(arr) {
+  let dataArr = [];
+  for (let w = 0; w < arr.length; w++) {
+    dataArr.push(arr[w].totalPrice);
+  }
+  dataArr.sort(function (a, b) {
+    return b - a;
+  });
+  console.log(
+    "Хамгийн бага борлуулалтын нийт үнийн дүнгүүд : ",
+    dataArr.slice(5, 11)
+  );
+}
+
+let findMin5 = findmin5(data);
